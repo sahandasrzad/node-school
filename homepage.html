@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body>
+    
+  <div class="container">
+
+
+<section>
+<div class="nav d-flex  bg-warning ">
+        <ul class="nav-lang m-3 text-right">
+            <li class="nav-lang-id"><a href="/id/" class="switch-lang text-dark" lang="id">Bahasa Indonesia</a></li>
+            <li class="nav-lang-de "><a href="/de/" class="switch-lang text-dark" lang="de">Deutsch</a></li>
+            <li class="nav-lang-enselected">English</li>
+            <li class="nav-lang-es  text-dark"><a href="/es/" class="switch-lang text-dark" lang="es">Español</a></li>
+            <li class="nav-lang-fr-fr "><a href="/fr-fr/" class="switch-lang text-dark" lang="fr-fr">Français</a></li>
+            <li class="nav-lang-it "><a href="/it/" class="switch-lang text-dark" lang="it">Italiano</a></li>
+            <li class=" nav-lang-nb-no"><a href="/nb-no/" class="switch-lang  text-dark" lang="nb-no">Norsk</a></li>
+            <li class=" nav-lang-pl"><a href="/pl/" class="switch-lang text-dark" lang="pl">Polski</a></li>
+            <li class=" nav-lang-pt-br"><a href="/pt-br/" class="switch-lang text-dark" lang="pt-br">Português (Brasil)</a></li>
+            <li class=" nav-lang-pt-pt"><a href="/pt-pt/" class="switch-lang text-dark" lang="pt-pt">Português (Europeu)</a></li>
+            <li class=" nav-lang-fi"><a href="/fi/" class="switch-lang text-dark" lang="fi">Suomi</a></li>
+            <li class=" nav-lang-sv"><a href="/sv/" class="switch-lang text-dark" lang="sv">Svenska</a></li>
+            <li class=" nav-lang-vi"><a href="/vi/" class="switch-lang text-dark" lang="vi">Tiếng Việt</a></li>
+            <li class=" nav-lang-tr"><a href="/tr/" class="switch-lang text-dark" lang="tr">Türkçe</a></li>
+            <li class="nav-lang-bg "><a href="/bg/" class="switch-lang text-dark" lang="bg">Български</a></li>
+            <li class=" nav-lang-ru"><a href="/ru/" class="switch-lang text-dark" lang="ru">Русский</a></li>
+            <li class=" nav-lang-uk"><a href="/uk/" class="switch-lang text-dark" lang="uk">Українська</a></li>
+            <li class=" nav-lang-fa"><a href="/fa/" class="switch-lang text-dark" lang="fa">فارسی</a></li>
+            <li class=" nav-lang-th"><a href="/th/" class="switch-lang text-dark" lang="th">ภาษาไทย</a></li>
+            <li class=" nav-lang-ja"><a href="/ja/" class=" text-dark switch-lang" lang="ja">日本語</a></li>
+            <li class=" nav-lang-zh-tw "><a href="/zh-tw/" class="switch-lang text-dark" lang="zh-tw">正體中文</a></li>
+            <li class=" nav-lang-zh-cn"><a href="/zh-cn/" class="switch-lang text-dark" lang="zh-cn">简体中文</a></li>
+            <li class=" nav-lang-ko"><a href="/ko/" class=" text-dark switch-lang" lang="ko">한국어</a></li></ul>
+<div class="container ">
+    <div class="d-flex justify-content-center"><img class="schoolimage " src="schoolhouse.svg" alt="nodeschool logo"></div>
+        
+        <h1 class="name d-flex justify-content-center">nodeschool</h1>
+        <p class="subtitle d-flex justify-content-center" data-i18n="index-header-top">Open source workshops that teach web software skills. Do them on your own or at a workshop nearby.</p>
+
+        <nav role="navigation" class="d-flex justify-content-center">
+                <ul class="headerbuttons d-inline-block">
+                       
+                  <li class="d-inline-block m-1"> <button type="button" class="btn btn-outline-dark p-2">Tutorials</button></li>
+                  <li class="d-inline-block m-1"> <button type="button" class="btn btn-outline-dark p-2">Events</button></li>
+                  <li  class="d-inline-block m-1"> <button type="button" class="btn btn-outline-dark p-2">Chapters</button></li>
+                  <li class="d-inline-block m-1"> <button type="button" class="btn btn-outline-dark p-2">About</button></li>
+                  <li class="d-inline-block m-1"> <button type="button" class="btn btn-outline-dark p-2">Build</button></li>
+                  <li class="d-inline-block m-1"> <button type="button" class="btn btn-outline-dark p-2">Host</button></li>
+                </ul>
+              </nav>
+
+        <p class="d-flex justify-content-center"><span data-i18n="index-header-bottom" >Get started by installing one of our </span> <a data-i18n="index-header-bottomA" class="big-link text-dark border-bottom-dark" href="#workshopper-list"> core workshops</a>.</p>
+    </div>
+</div>
+</section>
+
+
+
+<section>
+
+
+<div class="workshops bg-white text-dark"> <div class="container workshop-header" style="background-color: #fff;">
+        <div class="full">
+          <h2 class="big-heading d-flex justify-content-center" data-i18n="index-workshop-header">Workshops</h2>
+          <p data-i18n="index-workshop-info" class="d-flex justify-content-center">These are in-person hosted workshops, usually free, in which workshoppers are used as curriculum and mentors help attendees work through the challenges.</p>
+          <nav>
+            <ul class="inner-nav d-flex justify-content-center">
+              <li class="m-2 bg-warning"><button type="button" class="btn btn-outline-dark d-inline-block">Host Your Own</button></li>
+              <li class="m-2 bg-warning"><button type="button" class="btn btn-outline-dark d-inline-block">See All Events</button></li>
+              <li class="m-2 bg-warning"><button type="button" class="btn btn-outline-dark d-inline-block">Writeups of Past Events</button></li>
+            </ul>
+          </nav>
+        </div>
+      </div></div>
+
+
+</section>
+
+
+
+<section>
+
+
+<div class="mainmap d-flex flex-row d-md-flex flex-sm-column d-lg-flex flex-lg-row d-xl-flex flex-xl-row ">
+        <div class="p-2  col-xl-6 col-lg-6 col-md-12 col-sm-12"><div id='map' style='width: 400px; height: 300px;'></div></div>
+        <div class="p-2 col-xl-3 col-lg-3 col-md-12 col-sm-12"><div class="p-2 third upcoming-workshoppers">
+                <h4 >Upcoming Workshops</h4>
+                <div id="upcoming-workshops" class="success">
+                  
+                  
+                  <div class="success">
+                    <ul class="node-school-event" >
+                      <li>10/27/2018 <a class="text-dark" href=""><u> NodeSchool Sydney</u></a></li>
+                      <li>11/20/2018 <a class="text-dark" href=""><u> NodeSchool Passau</u></a></li>
+                    </ul>
+                    <p><u> <a href="events.html" class="text-dark all-events">See all events</a>.</u></p>
+                  </div>
+           
+                </div>
+</div></div>
+<div class="p-2  col-xl-3 col-lg-3 col-md-12 col-sm-12"> <div class="p-2 third anyone-can-host">
+        <h4 >Anyone can host</h4>
+        <p id="event-count"><span data-i18n="index-host-past">There have been a total of</span> <strong class="cnt">856</strong> <span >events!</span></p>
+        <p class="node-school-event"><span >NodeSchool is decentralized, open source and volunteer run. Want to host an event?</span> <a class="text-dark" href="host.html" ><u> Resources and tips</u></a> <span >for how.</span></p>
+   </div>   </div>
+    </div>
+
+
+</section>
+
+
+
+
+<section class="bg-light">
+
+    <div class="workshoppers bg-light text-dark"> <div class=" workshop-header" >
+            <div class="full">
+              <h2 class="big-heading d-flex justify-content-center" data-i18n="index-workshop-header">Workshoppers</h2>
+              <p data-i18n="index-workshop-info" class="d-flex justify-content-center">Workshopper is the name used for the open source lesson modules associated with NodeSchool. All are self guided (you don't need to attend a workshop to do one) and most work offline.</p>
+             <nav role="navigation" class="d-flex justify-content-center">
+                <ul class="inner-nav  headerbuttons d-inline-block">
+                  <li class="m-2 d-inline-block bg-warning"><button type="button" class="btn btn-outline-dark ">view workshoppers list</button></li>
+                  <li class="m-2 d-inline-block bg-warning"><button type="button" class="btn btn-outline-dark ">ask question if stuck</button></li>
+                  <li class="m-2 d-inline-block bg-warning"><button type="button" class="btn btn-outline-dark ">answer questions</button></li>
+                  <li class="m-2 d-inline-block bg-warning"><button type="button" class="btn btn-outline-dark ">build a workshop</button></li>
+                </ul>
+              </nav>
+            </div>
+          </div></div>
+
+          <div class="codesection bg-light  d-flex flex-row d-md-flex d-sm-flex flex-sm-column flex-md-column d-lg-flex flex-lg-row d-xl-flex flex-xl-row">
+                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 h-50 term1 m-2">
+                <div class=" third ">
+                  <div class="term">
+                    <div class="chrome">
+                      <span class=""><img src="min.png" alt=""></span>
+                      <span class=""><img src="min.png" alt=""></span>
+                      <span class=""><img src="min.png" alt=""></span>
+                    </div>
+                    <div class="shell d-flex  m-2 flex-column">
+                      <code class="mycode m-2 p-2">  npm install -g learnyounode</code>
+                      <code class="mycode m-2 p-2">  learnyounode</code>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 h-50 term1 m-2">
+                <div class=" third   ">
+                  <div class="term">
+                    <div class="chrome">
+                      <span class=""><img src="min.png" alt=""></span>
+                      <span class=""><img src="min.png" alt=""></span>
+                      <span class=""><img src="min.png" alt=""></span>
+                    </div>
+                    <div class="shell">
+                      <div class="workshopper m-2 d-flex  flex-column">
+                        <code class="m-1 p-2">» HELLO WORLD</code>
+                        <code class="m-2">» BABY STEPS</code>
+                        <code class="m-1 p-2">» MY FIRST I/O!</code>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        </div>
+
+   
+                 <div class=" col-xl-5 col-lg-5 col-md-12 col-sm-12 ">
+                  <div class="m-4" id="get-going">
+                    <h3 data-i18n="index-get-going-header">Get Going —</h3>
+                    <p class=" node-school-event m-2 p-3"><span data-i18n="index-get-going-info">You’ll need</span> <a class="text-dark" href="http://nodejs.org"><u> Node.js</u></a> <span data-i18n="index-get-going-info2">on your computer to get started
+            with each of these. Then use</span> <a class="text-dark" href="http://npmjs.org"><u> npm</u></a> <span data-i18n="index-get-going-info3">(it comes with Node) to install each
+            module with the command below it. Once installed,
+            simply type the workshopper’s name to launch.</span></p>
+                    <p class="node-school-event m-2 p-3"><span data-i18n="index-get-going-editor">You will also need a</span> <strong data-i18n="index-get-going-editor2">Text Editor</strong><span data-i18n="index-get-going-editor3">, if you don't have one already, you may want one for editing code. A few options:</span> <a class="text-dark" href="http://www.atom.io"><u> Atom</u></a><span data-i18n="index-get-going-editor4">,</span> <a class="text-dark" href="http://www.sublimetext.com/3"><u> Sublime Text</u></a><span data-i18n="index-get-going-editor5">,</span> <a class="text-dark" href="https://code.visualstudio.com"><u> Visual Studio Code</u></a><span data-i18n="index-get-going-editor6">,</span> <a class="text-dark" href="http://brackets.io/"><u> Brackets</u></a><span data-i18n="index-get-going-editor7">.</span></p>
+                    <p class="node-school-event m-2 p-3"><span data-i18n="index-get-going-help-pre">Problems with the workshopper? Try installing the latest version of Node.js (v6.2.0 or higher), or ask a question in the</span> <a class="text-dark" href="" target="_blank" rel="noreferrer noopener"><u>discussion</u> </a><span data-i18n="index-get-going-help-post">.</span></p>
+                  </div>
+                </div>
+      </div>        
+
+</section>
+
+
+
+
+
+<section >
+
+
+
+<div id="" class="d-flex flex-row  d-md-flex flex-md-column d-sm-flex flex-sm-column d-lg-flex flex-lg-row d-xl-flex flex-xl-row" style="background-color: #fff;">
+                    <div class=" col-xl-4 col-lg-4 col-md-12 col-sm-12">
+          <h2 class="m-4 p-3" data-i18n="index-workshoppers-core-header">Core</h2>
+          <p class="m-2 p-3"  data-i18n="index-workshoppers-core-info">These workshoppers focus on essential skills for working with Node.js.</p>
+          <p class="m-2 p-3 node-school-event" ><span data-i18n="index-workshoppers-core-link-pre">Stuck? Ask a question in the</span> <a class="text-dark" href="https://github.com/nodeschool/discussions/issues/new" target="_blank" rel="noreferrer noopener" data-i18n="index-workshoppers-core-link-text"><u> discussion</u></a><span data-i18n="index-workshoppers-core-link-post">.</span></p>
+                    </div>
+        <div class=" col-xl-8 col-lg-8 col-md-12 col-sm-12">
+            <div class="d-flex flex-wrap justify-content-end">
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="card bg-white border-light mb-3 m-4 p-2" >
+                            <div class="cdheader card-header">javascripting</div>
+                            <div class="card-body">
+                              
+                              <p class="card-text">Learn the basics of JavaScript. No previous programming experience required.</p>
+                          
+                           <code  class="card-title">npm install -g javascripting</code> 
+                            </div>
+                    </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="card bg-white border-light mb-3 m-4 " >
+                                <div class="cdheader card-header">git-it</div>
+                                <div class="card-body">
+                                  
+                                  <p class="card-text">Learn Git and GitHub basics.</p>
+                              
+                               <p  class="card-title node-school-event">Download the <a class="text-dark" href=""><u> latest desktop app release</u></a></p> 
+                                </div>
+                    </div>  
+                    </div>   
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">             
+                    <div class="card bg-white border-light mb-3 m-4 p-3" >
+                                    <div class="cdheader card-header">Elementary Electron</div>
+                                    <div class="card-body">
+                                      
+                                      <p class="card-text">Make a desktop application using Node and Chromium with Electron</p>
+                                  
+                                   <code  class="card-title">npm install -g elementary-electron </code> 
+                                    </div>
+                    </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="card bg-white border-light mb-3 m-4" >
+                                        <div class="cdheader card-header">learnyounode</div>
+                                        <div class="card-body">
+                                          
+                                          <p class="card-text">Learn the basics of node: asynchronous i/o, http.</p>
+                                      
+                                       <code  class="card-title">npm install -g learnyounode</code> 
+                                        </div>
+                    </div>  </div> 
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="card bg-white border-light mb-3 m-4 p-4" >
+                                            <div class="cdheader card-header">How to npm</div>
+                                            <div class="card-body">
+                                              
+                                              <p class="card-text">Learn how to use and create npm modules.</p>
+                                          
+                                           <code  class="card-title">npm install -g how-to-npm</code> 
+                                            </div>
+                    </div></div>
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="card bg-white border-light mb-3 m-4" >
+                                                <div class="cdheader card-header">stream-adventure</div>
+                                                <div class="card-body">
+                                                  
+                                                  <p class="card-text">Learn to compose streaming interfaces with</p>
+                                              
+                                               <code  class="card-title">npm install -g stream-adventure</code> 
+                                                </div>
+                    </div>   </div>
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="card bg-white border-light mb-3 m-4" >
+                                                    <div class="cdheader card-header">how-to-markdown</div>
+                                                    <div class="card-body">
+                                                      
+                                                      <p class="card-text">Learn how to start using Markdown — a lightweight markup language with plain text formatting syntax.</p>
+                                                  
+                                                   <code  class="card-title">npm install -g how-to-markdown</code> 
+                                                    </div>
+                    </div></div>
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 m-1">
+                    <div class="card bg-white border-light mb-3 m-4" >
+                                                        <div class="cdheader card-header">learnyouhtml</div>
+                                                        <div class="card-body">
+                                                          
+                                                          <p class="card-text">Learn how to create your first web page.</p>
+                                                      
+                                                       <code  class="card-title">npm install -g learnyouhtml</code> 
+                                                        </div>
+                    </div></div>
+            </div>
+        </div>
+</div>
+
+
+</section>
+
+
+
+
+
+<section>
+<div class="d-flex flex-row  d-md-flex flex-sm-column d-lg-flex flex-lg-row d-xl-flex flex-xl-row elective-workshoppers" style="background-color: #fff;">
+        <div class="third col-xl-4 col-lg-4 col-md-12 col-sm-12">
+          <h2 class="m-5 p-2"  data-i18n="index-workshoppers-elective-header">Electives</h2>
+          <p  class="m-3 p-2" data-i18n="index-workshoppers-elective-info">Workshoppers on popular libraries or styles of writing Node.js.</p>
+          <p class="m-3 p-2"><span data-i18n="index-workshoppers-elective-link-pre node-school-event">Stuck? Ask a question in the </span> <a class="text-dark" href=""><u> discussion</u></a><span data-i18n="index-workshoppers-elective-link-post">.</span></p>
+        </div>
+        <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12">
+                <div class="d-flex flex-wrap justify-content-end">
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <div class="card bg-white border-light mb-3 m-4 p-2" >
+                                <div class="cdheader2 card-header">Functional Javascript</div>
+                                <div class="card-body">
+                                  
+                                  <p class="card-text">Learn fundamental functional programming features of JavaScript in vanilla ES5.</p>
+                              
+                               <code  class="card-title">npm install -g functional-javascript-workshop</code> 
+                                </div>
+                        </div>
+</div>
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                <div class="card bg-white border-light mb-3 m-4 p-2" >
+                                        <div class="cdheader2 card-header">Level Me Up Scotty!</div>
+                                        <div class="card-body">
+                                          
+                                          <p class="card-text">Learn to use leveldb, a simple key/value store with a vibrant package.</p>
+                                      
+                                       <code  class="card-title">npm install -g levelmeup</code> 
+                                        </div>
+                                </div>
+</div>             
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                        <div class="card bg-white border-light mb-3 m-4 p-2" >
+                                                <div class="cdheader2 card-header">ExpressWorks</div>
+                                                <div class="card-body">
+                                                  
+                                                  <p class="card-text">Learn the basics of the Express.js framework.</p>
+                                              
+                                               <code  class="card-title">npm install -g expressworks</code> 
+                                                </div>
+                                        </div>
+</div>                                     
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                                <div class="card bg-white border-light mb-3 m-4 p-2" >
+                                                        <div class="cdheader2 card-header">Make Me Hapi</div>
+                                                        <div class="card-body">
+                                                          
+                                                          <p class="card-text">Learn all about hapi through a series of challenges.</p>
+                                                      
+                                                       <code  class="card-title">npm install -g makemehapi</code> 
+                                                        </div>
+                                                </div>
+</div>  
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                                        <div class="card bg-white border-light mb-3 m-4 p-2" >
+                                                                <div class="cdheader2 card-header">Promise It Won't Hurt</div>
+                                                                <div class="card-body">
+                                                                  
+                                                                  <p class="card-text">Learn to use promises in JavaScript to handle async operations.</p>
+                                                              
+                                                               <code  class="card-title">npm install -g promise-it-wont-hurt</code> 
+                                                                </div>
+                                                        </div>
+</div>     
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                                                <div class="card bg-white border-light mb-3 m-1 p-2" >
+                                                                        <div class="cdheader2 card-header">Async You</div>
+                                                                        <div class="card-body">
+                                                                          
+                                                                          <p class="card-text">Learn to use the async package.</p>
+                                                                      
+                                                                       <code  class="card-title">npm install -g async-you</code> 
+                                                                        </div>
+                                                                </div>
+</div>          
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                          <div class="card bg-white border-light mb-3 m-4 p-2" >
+                            <div class="cdheader2 card-header">NodeBot Workshop</div>
+                              <div class="card-body">
+                                                                                  
+                            <p class="card-text">Make robots with the johnny-five api</p>
+                                                                              
+                          <code  class="card-title">npm install -g nodebot-workshop</code> 
+                      </div>
+                   </div>
+ </div>  
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <div class="card bg-white border-light mb-3 m-4 p-2" >
+                          <div class="cdheader2 card-header">Going Native</div>
+                            <div class="card-body">
+                                                                                
+                          <p class="card-text">An exploration of Node.js from the underside: native C++ add-ons.</p>
+                                                                            
+                        <code  class="card-title">npm install -g goingnative</code> 
+                    </div>
+                 </div>
+</div> 
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="card bg-white border-light mb-3 m-4 p-2" >
+                      <div class="cdheader2 card-header">Planet Proto</div>
+                        <div class="card-body">
+                                                                            
+                      <p class="card-text">Understanding JavaScript Prototypes.</p>
+                                                                        
+                    <code  class="card-title">npm install -g planetproto</code> 
+                </div>
+             </div>
+</div> 
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                <div class="card bg-white border-light mb-3 m-4 p-2" >
+                  <div class="cdheader2 card-header">WebGL Workshop</div>
+                    <div class="card-body">
+                                                                        
+                  <p class="card-text">Learn the basics of WebGL in small, manageable chunks.</p>
+                                                                    
+                <code  class="card-title">npm install -g webgl-workshop</code> 
+            </div>
+         </div>
+ </div> 
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+            <div class="card bg-white border-light mb-3 m-4 p-2" >
+              <div class="cdheader2 card-header">ESNext Generation</div>
+                <div class="card-body">
+                                                                    
+              <p class="card-text">Intro to ES6 Iterators, their use, and how they relate to Generators.</p>
+                                                                
+            <code  class="card-title">npm install -g esnext-generation</code> 
+        </div>
+     </div>
+</div>
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card bg-white border-light mb-3 m-4 p-2" >
+          <div class="cdheader2 card-header">Test Anything</div>
+            <div class="card-body">
+                                                                
+          <p class="card-text">Learn to test your code</p>
+                                                            
+        <code  class="card-title">npm install -g test-anything</code> 
+    </div>
+ </div>
+</div>
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card bg-white border-light mb-3 m-4 p-2" >
+          <div class="cdheader2 card-header">Tower of babel</div>
+            <div class="card-body">
+                                                                
+          <p class="card-text">Show you through a series of exercises that introduce you to ES6 features.</p>
+                                                            
+        <code  class="card-title">npm install -g tower-of-babel</code> 
+    </div>
+ </div>
+</div>   
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card bg-white border-light mb-3 m-4 p-2" >
+          <div class="cdheader2 card-header">learnyoumongo</div>
+            <div class="card-body">
+                                                                
+          <p class="card-text">Getting started with MongoDB and Node.js</p>
+                                                            
+        <code  class="card-title">npm install -g learnyoumongo</code> 
+    </div>
+ </div>
+</div>   
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card bg-white border-light mb-3 m-4 p-2" >
+          <div class="cdheader2 card-header">regex-adventure</div>
+            <div class="card-body">
+                                                                
+          <p class="card-text">Parse text with regular expressions</p>
+                                                            
+        <code  class="card-title">npm install -g regex-adventure</code> 
+    </div>
+ </div>
+</div>     
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card bg-white border-light mb-3 m-4 p-2" >
+          <div class="cdheader2 card-header">learn-sass</div>
+            <div class="card-body">
+                                                                
+          <p class="card-text">Learn the basics of SASS</p>
+                                                            
+        <code  class="card-title">npm install -g learn-sass</code> 
+    </div>
+ </div>
+</div>  
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card bg-white border-light mb-3 m-4 p-2" >
+          <div class="cdheader2 card-header">Pattern Lab Workshop</div>
+            <div class="card-body">
+                                                                
+          <p class="card-text">Learn the basics of Pattern Lab</p>
+                                                            
+        <code  class="card-title">npm install -g pattern-lab-workshop</code> 
+    </div>
+ </div>
+</div>  
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card bg-white border-light mb-3 m-4 p-2" >
+          <div class="cdheader2 card-header">learnyoubash</div>
+            <div class="card-body">
+                                                                
+          <p class="card-text">Learn you how to use the terminal and write your first Bash script.</p>
+                                                            
+        <code  class="card-title">npm install -g learnyoubash</code> 
+    </div>
+ </div>
+</div>   
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card bg-white border-light mb-3 m-4 p-2" >
+          <div class="cdheader2 card-header">Currying in JavaScript</div>
+            <div class="card-body">
+                                                                
+          <p class="card-text">Learn currying concept and creating a currying function in JavaScript.</p>
+                                                            
+        <code  class="card-title">npm install -g currying-workshopper</code> 
+    </div>
+ </div>
+</div>   
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card bg-white border-light mb-3 m-4 p-2" >
+          <div class="cdheader2 card-header">bacon-love</div>
+            <div class="card-body">
+                                                                
+          <p class="card-text">Learn concepts of Functional and Reactive Programming using the Bacon.js library.</p>
+                                                            
+        <code  class="card-title">npm install -g bacon-love</code> 
+    </div>
+ </div>
+</div>   
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card bg-white border-light mb-3 m-4 p-2" >
+          <div class="cdheader2 card-header">innersourceadventure</div>
+            <div class="card-body">                                                                
+          <p class="card-text">Learn about InnerSource software development.</p>                                                     
+        <code  class="card-title">npm install -g innersourceadventure</code> 
+    </div>
+ </div>
+</div>  
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card bg-white border-light mb-3 m-4 p-2" >
+          <div class="cdheader2 card-header">Shader School</div>
+            <div class="card-body">                                                                
+          <p class="card-text">Learn the fundamentals of graphics programming using GLSL shaders.</p>                                                     
+        <code  class="card-title">npm install -g shader-school</code> 
+    </div>
+ </div>
+</div>     
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card bg-white border-light mb-3 m-4 p-2" >
+          <div class="cdheader2 card-header">Bytewiser</div>
+            <div class="card-body">                                                                
+          <p class="card-text">Learn how to manipulate binary data in node.js and HTML5 browsers.</p>                                                     
+        <code  class="card-title">npm install -g bytewiser</code> 
+    </div>
+ </div>
+</div> 
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card bg-white border-light mb-3 m-4 p-2" >
+          <div class="cdheader2 card-header">Bug Clinic</div>
+            <div class="card-body">                                                                
+          <p class="card-text">Learn some new tools and techniques as you improve your debugging skills.</p>                                                     
+        <code  class="card-title">npm install -g bug-clinic</code> 
+    </div>
+ </div>
+</div>              
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card bg-white border-light mb-3 m-4 p-2" >
+          <div class="cdheader2 card-header">Browserify Adventure</div>
+            <div class="card-body">                                                                
+          <p class="card-text">Use npm modules and node-style require() in the browser with browserify.</p>                                                     
+        <code  class="card-title">npm install -g browserify-adventure</code> 
+    </div>
+ </div>
+</div>     
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card bg-white border-light mb-3 m-4 p-2" >
+          <div class="cdheader2 card-header">Intro to WebGL</div>
+            <div class="card-body">                                                                
+          <p class="card-text">Get started with three.js and WebGL.</p>                                                     
+        <code  class="card-title">npm install -g introtowebgl</code> 
+    </div>
+ </div>
+</div>    
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card bg-white border-light mb-3 m-4 p-2" >
+          <div class="cdheader2 card-header">Count to 6</div>
+            <div class="card-body">                                                                
+          <p class="card-text">Learn how to use some features from ES6, the next version of JavaScript.</p>                                                     
+        <code  class="card-title">npm install -g count-to-6</code> 
+    </div>
+ </div>
+</div> 
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card bg-white border-light mb-3 m-4 p-2" >
+          <div class="cdheader2 card-header">Kick off Koa</div>
+            <div class="card-body">                                                                
+          <p class="card-text">Getting started with Koa, the next generation web framework for Node.js.</p>                                                     
+        <code  class="card-title">npm install -g kick-off-koa</code> 
+    </div>
+ </div>
+</div>         
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card bg-white border-light mb-3 m-4 p-2" >
+          <div class="cdheader2 card-header">LololoDash</div>
+            <div class="card-body">                                                                
+          <p class="card-text">Learn Lo-Dash (fork of underscore) to handle your arrays and objects simple!</p>                                                     
+        <code  class="card-title">npm install -g lololodash</code> 
+    </div>
+ </div>
+</div> 
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card bg-white border-light mb-3 m-4 p-2" >
+          <div class="cdheader2 card-header">learnyoucouchdb</div>
+            <div class="card-body">                                                                
+          <p class="card-text">Learn about CouchDB - the database that completely embraces the web</p>                                                     
+        <code  class="card-title">npm install -g learnyoucouchdb</code> 
+    </div>
+ </div>
+</div> 
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card bg-white border-light mb-3 m-4 p-2" >
+          <div class="cdheader2 card-header">learnuv</div>
+            <div class="card-body">                                                                
+          <p class="card-text">Learn uv for fun and profit, a self guided workshop to the library that powers Node.js.</p>                                                     
+        <code  class="card-title">git clone https://github.com/thlorenz/learnuv.git &amp;&amp; cd learnuv &amp;&amp; npm install</code> 
+    </div>
+ </div>
+</div>
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card bg-white border-light mb-3 m-4 p-2" >
+          <div class="cdheader2 card-header">Learn Generators</div>
+            <div class="card-body">                                                                
+          <p class="card-text">An Intro to JavaScript ES6 Generators</p>                                                     
+        <code  class="card-title">npm install -g learn-generators</code> 
+    </div>
+ </div>
+</div>
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card bg-white border-light mb-3 m-4 p-2" >
+          <div class="cdheader2 card-header">learnyoureact</div>
+            <div class="card-body">                                                                
+          <p class="card-text">Let's learn React.js and server side rendering!</p>                                                     
+        <code  class="card-title">npm install -g learnyoureact</code> 
+    </div>
+ </div>
+</div>
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card bg-white border-light mb-3 m-4 p-2" >
+          <div class="cdheader2 card-header">perfschool</div>
+            <div class="card-body">                                                                
+          <p class="card-text">Find your way through the web performance optimization maze!</p>                                                     
+        <code  class="card-title">npm install -g perfschool</code> 
+    </div>
+ </div>
+</div>    
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card bg-white border-light mb-3 m-4 p-2" >
+          <div class="cdheader2 card-header">Web Audio School</div>
+            <div class="card-body">                                                                
+          <p class="card-text">Learn the Web Audio API by completing a series of interactive lessons with a focus on music.</p>                                                     
+        <code  class="card-title">npm install -g web-audio-school</code> 
+    </div>
+ </div>
+</div>         
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card bg-white border-light mb-3 m-4 p-2" >
+          <div class="cdheader2 card-header">torrential</div>
+            <div class="card-body">                                                                
+          <p class="card-text">A set of lessons to show you how to create a simple p2p bittorrent network</p>                                                     
+        <code  class="card-title">npm install -g torrential</code> 
+    </div>
+ </div>
+</div>
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card bg-white border-light mb-3 m-4 p-2" >
+          <div class="cdheader2 card-header">Thinking in React</div>
+            <div class="card-body">                                                                
+          <p class="card-text">Learn React's philosophy by building a UI from scratch.</p>                                                     
+        <code  class="card-title">npm install -g thinking-in-react</code> 
+    </div>
+ </div>
+</div>     
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card bg-white border-light mb-3 m-4 p-2" >
+          <div class="cdheader2 card-header">Post-mortem debugging</div>
+            <div class="card-body">                                                                
+          <p class="card-text">Learn how to use post-mortem debugging on SmartOS to efficiently debug Node.js applications in production.</p>                                                     
+        <code  class="card-title">npm install -g node-debug-school</code> 
+    </div>
+ </div>
+</div>  
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card bg-white border-light mb-3 m-4 p-2" >
+          <div class="cdheader2 card-header">Seneca in practice</div>
+            <div class="card-body">                                                                
+          <p class="card-text">Learn how to leverage SenecaJs microservice toolkit.</p>                                                     
+        <code  class="card-title">npm install -g seneca-in-practice</code> 
+    </div>
+ </div>
+</div>       
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card bg-white border-light mb-3 m-4 p-2" >
+          <div class="cdheader2 card-header">LESS is more</div>
+            <div class="card-body">                                                                
+          <p class="card-text">Learn the fundamentals of the LESS CSS preprocessor.</p>                                                     
+        <code  class="card-title">npm install -g less-is-more</code> 
+    </div>
+ </div>
+</div>          
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card bg-white border-light mb-3 m-4 p-2" >
+          <div class="cdheader2 card-header">JavaScript best practices</div>
+            <div class="card-body">                                                                
+          <p class="card-text">Learn the best practices of writing clean JavaScript code.</p>                                                     
+        <code  class="card-title">npm install -g js-best-practices</code> 
+    </div>
+ </div>
+</div>        
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card bg-white border-light mb-3 m-4 p-2" >
+          <div class="cdheader2 card-header">Scope Chains &amp; Closures</div>
+            <div class="card-body">                                                                
+          <p class="card-text">Learn the details of Scope, Scope Chains, Closures, and Garbage Collection..</p>                                                     
+        
+        <code class="card-title">npm i @workshoppers/scope-chains-closures -g</code><br>
+        <code class="card-title">scope-chains-closures</code>
+    </div>
+ </div>
+</div>   
+
+
+          </div>
+     </div>
+</div>
+
+</section>
+
+
+
+
+<section>
+
+
+<div class="d-flex border-top m-4 p-4 flex-row d-md-flex d-sm-flex flex-sm-column flex-md-column d-lg-flex flex-lg-row d-xl-flex flex-xl-row" style="background-color: #fff;">
+       
+            <div class=" col-xl-3 col-lg-3 col-md-12 col-sm-12">
+              <div class="m-3">
+      <p><strong>nodeschool.io</strong></p>
+      <small><span>Photos by</span> <a class="text-dark" href="https://www.flickr.com/photos/matthewbergman" target="_blank" rel="noreferrer noopener">Matthew Bergman</a><span></span></small>
+  </div></div>
+  <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12">
+  <div class="two-thirds d-flex  d-lg-flex flex-lg-row d-xl-flex flex-xl-row flex-row d-md-flex d-sm-flex flex-sm-column flex-md-column ">
+      <div class="m-3">
+    <ul class="d-flex footnav ml-5 flex-column">
+        <li><strong data-i18n="footer-contact-header">Contact</strong></li>
+        <li><a class="text-dark" href="https://twitter.com/nodeschool" target="_blank" rel="noreferrer noopener">t/@nodeschool</a></li>
+        <li><a class="text-dark" href="https://github.com/nodeschool" target="_blank" rel="noreferrer noopener">gh/nodeschool</a></li>
+      </ul></div>
+      <div class="m-3">
+      <ul class="d-flex footnav ml-5 flex-column">
+        <li><strong data-i18n="footer-contribute-header">Contribute</strong></li>
+        <li><a class="text-dark" href="https://github.com/nodeschool/discussions/issues/new" target="_blank" rel="noreferrer noopener" data-i18n="footer-contribute-question">Open an Issue</a></li>
+        <li><a class="text-dark" href="https://github.com/nodeschool/discussions/issues" target="_blank" rel="noreferrer noopener" data-i18n="footer-contribute-answer">Answer a Question</a></li>
+      </ul></div>
+      <div class="m-3">
+      <ul class="d-flex footnav ml-5  flex-column">
+        <li><strong data-i18n="footer-about-header">About</strong></li>
+        <li><a class="text-dark"  href="building-workshops.html" data-i18n="footer-about-build">Build a workshopper</a></li>
+        <li><a class="text-dark" href="host.html" data-i18n="footer-about-host">Host a workshop</a></li>
+        <li><a class="text-dark" href="https://github.com/nodeschool/nodeschool.github.io/blob/source/LICENSE" data-i18n="footer-about-license">Website license</a></li>
+      </ul></div>
+   </div></div>
+      </div>
+
+</section>
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1Ijoic2FoYW5kYXNyemFkIiwiYSI6ImNqbnN2YnFrZzBjN3gzcXAzMXR0cGh5MDIifQ.9DUJrgA989aPE3PTrQKydA';
+  var map = new mapboxgl.Map({
+      container: 'map', // container id
+      style: 'mapbox://styles/mapbox/streets-v9',
+      center: [-74.50, 40], // starting position
+      zoom: 9 // starting zoom
+  });
+  
+  // Add zoom and rotation controls to the map.
+  map.addControl(new mapboxgl.NavigationControl());
+  </script>
+</div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</html>

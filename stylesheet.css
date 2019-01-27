@@ -1,0 +1,61 @@
+.nav-lang{ 
+    text-decoration:none;
+    list-style: none;
+}
+.nav{
+    background-image: url(test-bg.png)!important;   
+}
+.nav-lang  li {
+    display: block;
+    float:right;
+    padding: 5px; 
+}
+.schoolimage{
+    width: 300px;
+    height: auto;
+}
+.inner-nav{
+    text-decoration:none;
+    list-style: none;
+}
+#map {
+    position:absolute; top:0; bottom:0; width:100%;
+ }
+ .mainmap{
+     margin-top: 60px;
+     margin-bottom: 100px;
+ }
+ .workshops{
+    margin-top: 60px;
+}
+.term1 {
+    border: 1px solid rgb(154, 155, 153);
+}
+.chrome{
+    border-bottom: 1px solid rgb(154, 155, 153);
+}
+.workshopper{
+    background-color: rgb(253, 226, 168);
+}
+.codesection {   
+    margin-top: 60px;
+}
+.cdheader{
+    background-color: #ffe51f;
+}
+.cdheader2{
+    background-color: #050504;
+    color: white;
+}
+.footnav{ 
+    text-decoration:none;
+    list-style: none;
+}
+.mycode{
+    border-left: 8px solid #f7da03;
+}
+
+.node-school-event{
+    text-decoration:none;
+    list-style: none;
+}
